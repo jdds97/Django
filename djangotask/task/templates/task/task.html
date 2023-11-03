@@ -3,17 +3,17 @@
 <h1>Task</h1>
 <div class="task">
     <ul>
-    {%for task in tasks %}
-    <li>{{ task.name }} - {{ task.description }} <br>
-        ¿Está hecha?
-        <br>
-        ({{ task.done|yesno:"Sí,No" }})
-    </li>
-    {% empty %}
-    <li>No hay tareas por hacer</li>
-    {%endfor%}
-    
-    </ul>   
+        {%for task in tasks %}
+        <li>{{ task.name }} - {{ task.description }} <br>
+            ¿Está hecha?
+            <br>
+            ({{ task.done|yesno:"Sí,No" }})
+        </li>
+        {% empty %}
+        <li>No hay tareas por hacer</li>
+        {%endfor%}
+
+    </ul>
 </div>
 
 {%endblock%}
