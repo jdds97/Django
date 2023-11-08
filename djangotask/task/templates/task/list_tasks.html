@@ -13,6 +13,18 @@
 </head>
 <body>
     <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block form %}
+            {% endblock %}
+            <h1>Formulario</h1>
+            <form action="{% url 'task' %}" method="POST">
+                {%csrf_token%}
+                {{ form.as_p }}
+                <button type="submit">Nueva tarea</button>
+            </form>
+            </div>
+        </div>
     <div class="row">
         <div class="col-md-8">
         {% block content %}
